@@ -5,10 +5,7 @@
 #include <string.h>
 
 int isPalindrome(char*word){
-  //int longitud = strlen(word);
-  //if(longitud%2==0) {
-    //return 0;
-  //}
+
 }
 
 void getInput(char*word) {
@@ -24,7 +21,7 @@ int main(){
   if(isPalindrome(palabra)) {
     printf("Es palindromo");
   } else {
-    printf("No palindromo");
+    printf("No es palindromo");
   }
 
 }
