@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 
-int isPalindrome(char*word){
-
+int isPalindrome(char*word) {
+  int longitud = strlen(word);
 }
 
 void getInput(char*word) {
