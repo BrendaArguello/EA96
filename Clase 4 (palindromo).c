@@ -6,6 +6,17 @@
 
 int isPalindrome(char*word) {
   int longitud = strlen(word);
+  int izquierda = 0;
+  int derecha = longitud - 1;
+
+  while (izquierda < derecha){
+  if (word[izquierda] != word[derecha]) {
+  return 0;
+  }
+    izquierda++;
+    derecha--;
+  }
+  return 1;
 }
 
 void getInput(char*word) {
