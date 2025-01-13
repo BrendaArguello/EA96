@@ -22,12 +22,12 @@ void displayMenu() {
 }
 
 int main() {
-  int option;
+  int opcion;
   float input, resultado;
     displayMenu();
-  scanf("%d",&option);
+  scanf("%d",&opcion);
 
-switch(option) {
+switch(opcion) {
   case 1:
     printf("Ingrese los grados celsius \n");
   scanf("%f",&input);
