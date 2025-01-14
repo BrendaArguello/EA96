@@ -3,16 +3,15 @@
 //
 #include <stdio.h>
 float celsiusToFarenheit (float celsius) {
-  printf("Grados Fahrenheit = %f\n", (celsius*9)/52+32);
+  return (celsius * 9 / 5) + 32;
 }
 float farenheitToCelsius (float farenheit) {
-  printf("Grados Celsius = %f\n", (farenheit-32)*0.556);
+  return (farenheit - 32) * 5 / 9;
 }
 
 float celsiusToKelvin(float celsius) {
-  printf("Grados Kelvin = %f\n", celsius+273.15);
+  return celsius + 273.15;
 }
-
 
 void displayMenu() {
 
@@ -23,28 +22,31 @@ void displayMenu() {
 }
 
 int main() {
-  int option;
+  int opcion;
   float input, resultado;
     displayMenu();
-  scanf("%d",&option);
+  scanf("%d",&opcion);
 
-switch(option) {
+switch(opcion) {
   case 1:
     printf("Ingrese los grados celsius \n");
   scanf("%f",&input);
   resultado = celsiusToFarenheit(input);
+  printf("Grados Fahrenheit: %.2f\n", resultado);
   break;
 
   case 2:
     printf("Ingrese los grados Fahrenheit \n");
   scanf("%f",&input);
   resultado = farenheitToCelsius(input);
+  printf("Grados Celsius: %.2f\n", resultado);
   break;
 
   case 3:
     printf("Ingrese los grados Celsius \n");
   scanf("%f",&input);
   resultado = celsiusToKelvin(input);
+    printf("Grados Kelvin: %.2f\n", resultado);
   break;
 }
   return 0;
