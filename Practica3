@@ -1,0 +1,60 @@
+public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+
+             List<Integer> result = new ArrayList();
+
+             int resultadoAlice = 0;
+             int resultadoBob = 0;
+
+             for(int i=0;i<3;i++){
+             if(a.get(i)<b.get(i)){
+                 resultadoBob +=1;
+             }
+             if(a.get(i)>b.get(i)){
+                 resultadoAlice +=1;
+             }
+             }
+
+             result.add(resultadoAlice);
+             result.add(resultadoBob);
+
+             return result;
+         }
+**************************************************************************************
+public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+
+          List<Integer> result = new ArrayList();
+
+          int resultadoAlice = 0;
+          int resultadoBob = 0;
+
+          for(int i=0;i<3;i++){
+          if(a.get(i)<b.get(i)){
+              resultadoBob +=1;
+          }
+          if(a.get(i)>b.get(i)){
+              resultadoAlice +=1;
+          }
+          }
+
+          result.add(resultadoAlice);
+          result.add(resultadoBob);
+
+          return result;
+      }
+ ******************************************************************
+public static int birthdayCakeCandles(List<Integer> candles) {
+    // Write your code here
+    int maximaAltura = 0;
+    int numeroVelitas = 0;
+    for(int i=0; i< candles.size();i++){
+        if (maximaAltura<candles.get(i)){
+            maximaAltura = candles.get(i);
+        }
+    }
+    for(int i=0; i<candles.size(); i++){
+        if(maximaAltura == candles.get(i)){
+            numeroVelitas +=1;
+        }
+    }
+    return numeroVelitas;
+    }
