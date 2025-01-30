@@ -1,0 +1,21 @@
+int* rotateLeft(int d, int arr_count, int* arr, int* result_count) {
+       d = d % arr_count;
+
+    *result_count = arr_count;
+
+    int result[arr_count];
+
+    for (int i = 0; i < arr_count - d; i++) {
+        result[i] = arr[i + d];
+    }
+
+    for (int i = 0; i < d; i++) {
+        result[arr_count - d + i] = arr[i];
+    }
+
+    for (int i = 0; i < arr_count; i++) {
+        arr[i] = result[i];
+    }
+
+    return arr;
+}
